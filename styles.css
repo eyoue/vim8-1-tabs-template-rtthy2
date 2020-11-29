@@ -1,0 +1,32 @@
+/* Add application styles & imports to this file! */
+.tabs__titles {
+  flex: 1 1 0;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.tabs__title {
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+}
+.tabs__title--active {
+  border-bottom: 2px solid #ff2222;
+}
+.tabs__content {
+  position: absolute;
+}
+
+.tabs__title--active + .tabs__content {
+  animation-duration: 0.5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}

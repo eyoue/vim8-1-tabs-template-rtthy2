@@ -7,7 +7,6 @@ import {
   QueryList
 } from "@angular/core";
 import { takeUntil } from "rxjs/internal/operators/takeUntil";
-import { tap } from "rxjs/internal/operators/tap";
 import { Subject } from "rxjs/internal/Subject";
 import { TabComponent } from "./tab/tab.component";
 import { TabsService } from "./tabs.service";

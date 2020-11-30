@@ -20,7 +20,8 @@ import { TabsService } from "../tabs.service";
 })
 export class TabComponent {
   active = false;
-  @ContentChild(ContentRenderDirective) renderContent: ContentRenderDirective;
+  @ContentChild(ContentRenderDirective, { static: false })
+  renderContent: ContentRenderDirective;
 
   constructor(private tabsService: TabsService) {}
 

@@ -37,7 +37,9 @@ export class TabsComponent implements OnInit, OnDestroy, AfterContentChecked {
   constructor(private tabsService: TabsService) {}
 
   ngOnInit() {
-    this.onChangeActivate.subscribe(() => this.deactivateAll());
+    this.onChangeActivate
+      .pipe(takeUntil(this.ngUnsubscribe$))
+      .subscribe(() => this.deactivateAll());
   }
   ngOnDestroy() {
     this.ngUnsubscribe$.next();
